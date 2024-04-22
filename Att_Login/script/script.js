@@ -1,20 +1,19 @@
 var usuario ={
     nome: "admin",
-    senha: "admin"
+    senha: "123"
 }
-
 function logar(){
-    var login = document.getElementById('login').value;
+    var nome = document.getElementById('nome').value;
     var senha = document.getElementById('senha').value;
 
     var recebe = {
         nome:nome,
-        senha:senha,
+        senha:senha
     }
 
     if(recebe.nome == usuario.nome && recebe.senha == usuario.senha){
         alert("Sucesso");
-        location.href = "outro.html";
+        location.replace("./outro.html");
     }else{
         alert("Usuario ou senha incorreto");
     }
